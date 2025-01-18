@@ -1,0 +1,39 @@
+@baseUrl = http://localhost:5000
+
+### Get all dynamic entities
+GET {{baseUrl}}/api/DynamicCRUD
+Accept: application/json
+
+### Create new dynamic entity
+POST {{baseUrl}}/api/DynamicCRUD
+Content-Type: application/json
+
+{
+  "properties": {
+    "name": "Test Entity",
+    "description": "This is a test entity",
+    "isActive": true,
+    "value": 123.45
+  }
+}
+
+### Get single dynamic entity
+GET {{baseUrl}}/api/DynamicCRUD/1
+Accept: application/json
+
+### Update dynamic entity
+PUT {{baseUrl}}/api/DynamicCRUD/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "properties": {
+    "name": "Updated Entity",
+    "description": "This entity has been updated",
+    "isActive": false,
+    "value": 678.90
+  }
+}
+
+### Delete dynamic entity
+DELETE {{baseUrl}}/api/DynamicCRUD/1

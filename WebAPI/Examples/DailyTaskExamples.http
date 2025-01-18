@@ -1,0 +1,30 @@
+### Create new daily task
+POST {{host}}/api/DynamicCRUD/DailyTask
+Content-Type: application/json
+
+{
+  "title": "Meeting dengan tim",
+  "description": "Membahas progress proyek",
+  "dueDate": "2024-03-15T09:00:00",
+  "completed": false
+}
+
+### Get all daily tasks
+GET {{host}}/api/DynamicCRUD/DailyTask
+
+### Get specific daily task
+GET {{host}}/api/DynamicCRUD/DailyTask/1
+
+### Update daily task
+PUT {{host}}/api/DynamicCRUD/DailyTask/1
+Content-Type: application/json
+
+{
+  "title": "Meeting dengan tim (diperbarui)",
+  "description": "Membahas progress proyek dan rencana berikutnya", 
+  "dueDate": "2024-03-15T09:30:00",
+  "completed": false
+}
+
+### Delete daily task
+DELETE {{host}}/api/DynamicCRUD/DailyTask/1
